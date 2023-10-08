@@ -10,6 +10,7 @@
 
 body {
   margin: 0;
+  background-color: var(--themes-background, #000);
 }
 
 h1,

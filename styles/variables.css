@@ -1,1 +1,27 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --main-font: "inter";
+  --main-font-press: "Press Start 2P";
+  --themes-background: #000;
+  --text-main: #00cc14;
+  --text-main-button: #00cc14;
+  --border-content: #00cc14;
+  --button-like__text: #fff;
+  --text-variable: 465;
+  --text-variable-title: 785;
+
+  --background-fons: repeating-linear-gradient(
+      90deg,
+      #000 0 2px,
+      rgb(0 0 0/0) 2px 4px
+    ),
+    repeating-linear-gradient(180deg, #000 0 2px, rgb(0 0 0/0) 2px 4px),
+    linear-gradient(180deg, #007f0c 0%, #004306 100%);
+}
+
+:root {
+  --fill: #00cc14;
+  --fill-main-body: #00cc14;
+  --fill-core: #00cc14;
+  --fill-sparks: #ff0000;
+}
