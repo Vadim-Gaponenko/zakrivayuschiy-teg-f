@@ -46,13 +46,6 @@
     repeating-linear-gradient(180deg, #000 0 2px, rgb(0 0 0/0) 2px 4px),
     linear-gradient(180deg, #007f0c 0%, #004306 100%);
 }
-:root.theme-light {
-  --fill: #000;
-  --fill-main-body: #000;
-  --fill-core: #000;
-  --fill-sparks: #ff0000;
-}
-
 @media (prefers-color-scheme: light) {
   :root {
     --themes-background: #fff;
@@ -61,6 +54,9 @@
     --main-text-weight-light: 400;
     --text-main-button: #fff;
     --fill: #000;
+    --fill-main-body: #000;
+    --fill-core: #000;
+    --fill-sparks: #ff0000;
     --text-variable: 400;
     --text-variable-title: 700;
     --background-fons: repeating-linear-gradient(
@@ -70,12 +66,6 @@
       ),
       repeating-linear-gradient(180deg, #d3d3d3 0 2px, rgb(0 0 0/0) 2px 4px),
       linear-gradient(180deg, #e7e7e7 0%, #1a1a1a 100%);
-  }
-  :root {
-    --fill: #000;
-    --fill-main-body: #000;
-    --fill-core: #000;
-    --fill-sparks: #ff0000;
   }
 }
 

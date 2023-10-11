@@ -9,6 +9,10 @@
   --button-like__text: #fff;
   --text-variable: 465;
   --text-variable-title: 785;
+  --fill: #00cc14;
+  --fill-main-body: #00cc14;
+  --fill-core: #00cc14;
+  --fill-sparks: #ff0000;
 
   --background-fons: repeating-linear-gradient(
       90deg,
@@ -17,11 +21,4 @@
     ),
     repeating-linear-gradient(180deg, #000 0 2px, rgb(0 0 0/0) 2px 4px),
     linear-gradient(180deg, #007f0c 0%, #004306 100%);
-}
-
-:root {
-  --fill: #00cc14;
-  --fill-main-body: #00cc14;
-  --fill-core: #00cc14;
-  --fill-sparks: #ff0000;
 }
