@@ -33,6 +33,11 @@
   --text-variable: 465;
   --text-variable-title: 785;
 
+  --fill: #00cc14;
+  --fill-main-body: #00cc14;
+  --fill-core: #00cc14;
+  --fill-sparks: #ff0000;
+
   --background-fons: repeating-linear-gradient(
       90deg,
       #000 0 2px,
@@ -78,5 +83,19 @@
   .footer__button {
     display: flex;
     flex-direction: column;
+  }
+  .content__foto {
+    height: 371px;
+  }
+  .content__info {
+    padding-right: 29px;
+    margin-bottom: 22px;
+  }
+  .content__lebel {
+    right: 11px;
+  }
+  .footer__floppy {
+    width: 28px;
+    height: 28px;
   }
 }

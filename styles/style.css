@@ -71,6 +71,9 @@
   line-height: normal;
   cursor: pointer;
 }
+.theme-menu__item-adjust {
+  margin-left: 20px;
+}
 .theme-menu__button::before {
   content: "";
   position: absolute;
@@ -87,13 +90,13 @@
 .theme-menu__button:focus-visible::before {
   transform: scaleX(1);
 }
-.theme-menu__button:focus-visible {
+.theme-menu__button:focus {
   opacity: 0.6;
   outline: none;
 }
 .theme-menu__button:disabled,
 .theme-menu__button:hover {
-  opacity: 0.5;
+  opacity: 0.6;
 }
 .theme-menu__button:disabled::after {
   content: "▶";
@@ -108,8 +111,13 @@
 }
 
 .header__title {
+  cursor: pointer;
+  text-decoration: none;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   text-transform: uppercase;
+}
+.header__title:focus-visible {
+  outline: none;
 }
 .header__content {
   text-transform: uppercase;
@@ -120,10 +128,11 @@
   max-inline-size: 696px;
   display: flex;
   flex-direction: column;
-  gap: 57px;
-  margin-bottom: 54px;
+  gap: 50px;
+  margin-bottom: 50px;
 }
 .content__block {
+  display: grid;
   background-color: var(--themes-background, #000);
 }
 .content__card-title {
@@ -134,26 +143,25 @@
   line-height: normal;
 }
 .content__info {
+  padding: 0 25px;
   display: grid;
   gap: 27px;
+  margin-bottom: 25px;
 }
-.content__info > li:nth-child(1) {
-  border-bottom: 2px solid var(--border-content, #00cc14);
-  border-top: 2px solid var(--border-content, #00cc14);
-}
-.content__info > li:not(li:nth-child(1)) {
-  padding-inline: 25px;
-}
+
 .content__foto {
   display: block;
   width: 100%;
-  height: 100%;
+  height: 696px;
   object-fit: cover;
   object-position: center;
   background-repeat: no-repeat;
 }
-.content__blok-foto {
+.content__block-foto {
+  margin-bottom: 25px;
   position: relative;
+  border-bottom: 2px solid var(--border-content, #00cc14);
+  border-top: 2px solid var(--border-content, #00cc14);
 }
 .content__lebel {
   font-family: var(--main-font-press);
@@ -166,7 +174,20 @@
   text-transform: uppercase;
   top: 25px;
   right: 20px;
-  opacity: 0.5;
+}
+
+@supports (mix-blend-mode: multiply) and (-webkit-text-stroke: 1px) {
+  .content__lebel {
+    mix-blend-mode: multiply;
+    -webkit-text-stroke: 1px;
+    text-stroke: 1px;
+    opacity: 0.5;
+  }
+}
+@supports not ((mix-blend-mode: multiply) and (-webkit-text-stroke: 1px)) {
+  .content__lebel {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
 }
 .content__lebel-lowercase {
   text-transform: lowercase;
@@ -174,7 +195,8 @@
 .content__button-like {
   display: flex;
   justify-content: end;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
+  margin-right: 25px;
 }
 
 .card__like-button {
@@ -279,6 +301,7 @@
 }
 
 .footer__button {
+  cursor: pointer;
   position: relative;
   font-family: var(--main-font-press), monospace;
   padding: 15px 20px;
@@ -346,9 +369,10 @@
   color: var(--text-main);
 }
 .pop-up__close {
+  display: grid;
+  border: none;
+  cursor: pointer;
   outline: 1px solid var(--border-content, #00cc14);
-  background-color: var(--themes-background, #000);
-  color: var(--text-main);
   grid-column: span 2;
   padding: 9px 17px;
   font-size: 14px;
@@ -357,9 +381,16 @@
   line-height: 90%;
   text-transform: uppercase;
 }
+.pop-up__button {
+  cursor: pointer;
+  border: none;
+  background-color: var(--themes-background, #000);
+  color: var(--text-main);
+  align-self: center;
+}
 
 .pop-up::backdrop {
-  background-color: rgb(0 0 0 / 0.3);
+  background-color: rgb(0 0 0 / 0.75);
   backdrop-filter: blur(7px);
 }
 .fotter__svg {
